@@ -12,7 +12,7 @@ import java.io.OutputStream;
  * the file output stream properly with a try-catch-finally block.
  */
 public class BinaryFileWriter implements Writable {
-  OutputStream fos;
+  OutputStream fos = null;
 
   @Override
   public void write(String filename, int sizeInBytes) {
