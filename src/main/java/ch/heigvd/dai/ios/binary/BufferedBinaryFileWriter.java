@@ -9,12 +9,9 @@ import java.io.*;
  * stream. It manages the file output stream properly with a try-with-resources block.
  */
 public class BufferedBinaryFileWriter implements Writable {
-  //OutputStream fos;
-  //BufferedOutputStream bos;
 
   @Override
   public void write(String filename, int sizeInBytes) {
-    //throw new UnsupportedOperationException("Please remove this exception and implement this method.");
     try (OutputStream fos = new FileOutputStream(filename);
          BufferedOutputStream bos = new BufferedOutputStream(fos)) {
 
